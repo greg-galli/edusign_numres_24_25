@@ -1,14 +1,12 @@
 package fr.numres.edusign.services;
 
 import fr.numres.edusign.dtos.UserDto;
-import fr.numres.edusign.entities.User;
 import fr.numres.edusign.mappers.UserMapper;
 import fr.numres.edusign.repositories.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements IUserService {
@@ -33,19 +31,17 @@ public class UserServiceImpl implements IUserService {
     }
 
     @Override
-    public UserDto createUser(User user) {
-        return userMapper.toDto(userRepository.save(user));
+    public UserDto createUser(UserDto userDto) {
+        return userMapper.toDto(userRepository.save(userMapper.toEntity(userDto)));
     }
 
     @Override
-    public UserDto createAndFlushUser(User user) {
-        return userMapper.toDto(userRepository.saveAndFlush(user));
+    public UserDto createAndFlushUser(UserDto userDto) {
+        return userMapper.toDto(userRepository.saveAndFlush(userMapper.toEntity(userDto)));
     }
 
     @Override
     public void deleteUser(Long id) {
         userRepository.deleteById(id);
     }
-
-
 }

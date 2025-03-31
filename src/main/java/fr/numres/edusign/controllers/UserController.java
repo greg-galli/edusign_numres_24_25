@@ -26,8 +26,8 @@ public class UserController {
     }
 
     @PostMapping
-    public UserDto createUser(@RequestBody User user)
+    public UserDto createUser(@RequestBody UserDto userDto)
     {
-        return userService.createAndFlushUser(user);
+        return userService.createAndFlushUser(userDto);
     }
 }

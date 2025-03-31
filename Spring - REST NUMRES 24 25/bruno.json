@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Spring / REST NUMRES 24 25",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}
