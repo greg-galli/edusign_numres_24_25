@@ -1,5 +1,5 @@
 
-# Projet Spring Boot - API REST "User"
+# Projet Spring Boot - API REST
 
 ## Objectif
 
@@ -13,9 +13,9 @@ L'objectif de ce projet est d'implémenter une API REST complète et parfaitemen
 
 -   `GET /user/{id}` : Récupérer un utilisateur par son identifiant
 
--   `PUT /user/{id}` : Mettre à jour un utilisateur (remplacement complet)
+-   `PUT /user/{id}` : Mettre à jour un utilisateur (remplacement complet, si un champs n'est pas spécifié il est mis à null / sa valeur par défaut si possible, si ce n'est pas possible alors l'opération doit renvoyer un code d'erreur et indiquer le problème)
 
--   `PATCH /user/{id}` : Mettre à jour partiellement un utilisateur
+-   `PATCH /user/{id}` : Mettre à jour partiellement un utilisateur (on ignore tous les champs qui ne sont pas spécifiés)
 
 -   `DELETE /user/{id}` : Supprimer un utilisateur
 
@@ -29,9 +29,9 @@ L'objectif de ce projet est d'implémenter une API REST complète et parfaitemen
 
 ### Gestion des cas particuliers
 
--   Vérification des entrées et validation des données
+-   Vérification des entrées et **validation des données**
 
--   Gestion des erreurs avec des codes d'état HTTP pertinents et des messages explicites
+-   Gestion des erreurs avec des **codes d'état HTTP pertinents** et des **messages explicites**
 
 -   Protection contre les opérations non valides (ex : suppression d'un utilisateur inexistant)
 
@@ -40,20 +40,16 @@ L'objectif de ce projet est d'implémenter une API REST complète et parfaitemen
 
 -   Code entièrement commenté pour expliquer les choix et le fonctionnement
 
--   Respect des principes SOLID et bonnes pratiques Spring Boot
-
 -   Utilisation de DTOs et de Mappers pour éviter l'exposition directe des entités
 
 
 ### Tests rigoureux
 
--   Écriture de tests unitaires et d'intégration couvrant tous les cas possibles
+-   Création d'une collection **Postman ou Bruno** contenant des requêtes de test **pour chaque type de retour de chaque endpoint**
 
--   Création d'une collection Postman ou Bruno contenant des requêtes de test pour chaque endpoint
+-   Ajout de **scripts** de test pour **vérifier les codes HTTP retournés** et le **contenu des réponses**
 
--   Ajout de scripts de test pour vérifier les codes HTTP retournés et le contenu des réponses
-
--   Organisation des tests dans une séquence logique permettant une exécution complète et automatisée
+-   Organisation des tests dans une **séquence logique** permettant une exécution complète et automatisée
 
 
 ### Documentation
@@ -64,16 +60,16 @@ L'objectif de ce projet est d'implémenter une API REST complète et parfaitemen
 
     -   La procédure pour lancer le projet
 
-    -   La procédure pour exécuter les tests (unitaires et collection Postman/Bruno)
+    -   La procédure pour exécuter les tests (collection Postman/Bruno)
 
 
 ## Exigences de rendu
 
-Le projet étant volontairement restreint en périmètre, une attention particulière est attendue sur la qualité et la complétude du travail fourni. Assurez-vous que :
+Le projet étant volontairement très restreint en terme de périmètre, une attention particulière est attendue sur la qualité et la complétude du travail fourni. Assurez-vous que :
 
 -   Le code est propre, bien structuré et bien commenté
 
--   Tous les cas d'utilisation sont gérés avec les bonnes réponses HTTP
+-   Tous les cas sont gérés avec les bonnes réponses HTTP
 
 -   Les tests couvrent tous les scénarios possibles et peuvent être exécutés de bout en bout sans erreur
 
@@ -82,13 +78,10 @@ Le projet étant volontairement restreint en périmètre, une attention particul
 
 ## Livrables
 
--   Code source complet et documenté
-
--   Fichier `README.md` détaillé
-
--   Collection Postman ou Bruno avec tests intégrés
-
--   Rapport final sur le projet et les choix techniques effectués
+- Code source complet et documenté incluant :
+  - Fichier `README.md` détaillé
+  - Collection Postman ou Bruno avec tests intégrés
+- Tout ce que vous pourriez produire au délà du périmètre décrit sera pris en compte sous forme de bonus, si vous mentionnez ces parties dans votre readme
 
 
 **Date limite de rendu : 20/04/2025 à 23h59**
