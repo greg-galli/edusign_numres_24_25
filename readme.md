@@ -83,5 +83,8 @@ Le projet étant volontairement très restreint en terme de périmètre, une att
   - Collection Postman ou Bruno avec tests intégrés
 - Tout ce que vous pourriez produire au délà du périmètre décrit sera pris en compte sous forme de bonus, si vous mentionnez ces parties dans votre readme
 
+## :warning: Attention :warning:
+Je serai intransigeant sur la triche sur cet exercice, n'utilisez que le code que vous aurez produit, ne partagez pas vos sources
+
 
 **Date limite de rendu : 20/04/2025 à 23h59**
